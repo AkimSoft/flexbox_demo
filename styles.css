@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.signup {
+  margin-left: auto;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995DA;  /* Blue */
+  padding: 20px 0;
+  display: flex; /* we’re telling the browser that everything 
+                 in the box should be rendered with flexbox*/
+  justify-content:center;  /* After you’ve got a flex container, 
+                          your next job is to define the horizontal 
+                          alignment of its items. That’s what the 
+                          justify-content property is for. We can use 
+                          it to center our .menu. Manipulating items
+                         through their containers like this is a 
+                         common theme in flexbox*/
+}
+
+.menu {
+   width: 900px;
+  display: flex;
+  justify-content: space-between;
+}                     /*  Flexbox doesn’t show its real strength 
+              until we have more than one item in a container. 
+                The justify-content property also lets you 
+              distribute items equally inside a container.*/
+
+              .links {
+                 display: flex;
+                justify-content: flex-end; 
+              }
+              
+              .login {
+                margin-left: 20px;
+              }
+
+              .header-container {
+                color: #5995DA;
+                background-color: #D6E9FE;
+                display: flex;
+                justify-content: center;
+              }
+            
+              .header {
+                width: 900px;
+                height: 300px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+
+              .photo-grid-container {
+                display: flex;
+                justify-content: center;
+              }
+              
+              .photo-grid {
+                width: 900px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+
+
+              }  /* Flexbox is a more powerful alternative 
+                  to float-based grids. Not only can it 
+                  render items as a grid—it can change their 
+                  alignment, direction, order, and size, too. 
+                  To create a grid, we need the flex-wrap property.*/
+              
+              .photo-grid-item {
+                border: 1px solid #fff;
+                width: 300px;
+                height: 300px;
+              }
+
+              .first-item {
+                order: 1;
+              }
+              
+              .last-item {
+                order: -1;
+              }
+
+              .social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+/*  What if we want that Subscribe 
+link and those social icons to go at 
+the bottom of the header instead of 
+the center? Align them individually! 
+This is where the align-self property 
+comes in. Adding this to a flex item 
+overrides the align-items value from 
+its container: */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;
+}
+
+
+.footer-three {
+  flex: 2;
+}
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
+}
